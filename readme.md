@@ -22,13 +22,13 @@ refer to LICENSE in repo.
 ## Screenshots
 
 Start Game
-![assets/images/start-game.png]
+!(assets/images/start-game.png)
 
 Playing Game
-![assets/images/playing-game.png]
+!(assets/images/playing-game.png)
 
 End Game and Save
-![assets/images/save-initials-score.png]
+!(assets/images/save-initials-score.png)
 
 ## To-Do's
 
