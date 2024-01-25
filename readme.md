@@ -7,6 +7,7 @@ game quiz that is timed and records high score at the end before quitting or res
 
 ## Installation
 
+https://justin-hunter1.github.io/04-challenge/
 
 
 ## License
@@ -20,18 +21,19 @@ refer to LICENSE in repo.
 
 ## Screenshots
 
+Start Game
+![assets/images/start-game.png]
 
+Playing Game
+![assets/images/playing-game.png]
+
+End Game and Save
+![assets/images/save-initials-score.png]
 
 ## To-Do's
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
+
 THEN a timer starts and I am presented with a question
 WHEN I answer a question
 THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
+
