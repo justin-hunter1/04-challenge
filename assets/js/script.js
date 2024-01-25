@@ -5,7 +5,7 @@ var btnEl = document.querySelector("#startgame");
 var questionEl = document.getElementById("question");
 var timeEl = document.getElementById("timerleft");
 var saveHS = document.querySelector("#save");
-var secondsLeft = 10;
+var secondsLeft = 30;
 var score = 0
 var questions = ["One", "Two", "Three", "Four"];
 var initchoices = ["A;B;C", "B;A;C", "C;B;A"];
@@ -16,19 +16,21 @@ var initanswers = ["t;f;f", "f;t;f", "f;f;t;"]; //f= incorrect; t= correct
   btnEl.addEventListener("click", startGame);
 
 
-
+// initiates the game
 function startGame(event) {
-  
+// calls countdown clock function
+  setTime();
+
+// removes start game button and sets styling
   btnEl.remove();
   gameboard.classList.remove("container");
   gameboard.setAttribute("class","box");
 
-  setTime();
-// start game 
-  for(i = 0; i < questions.length; i++) {
+  // loop thru questions  
+  for(var i = 0; i < questions.length; i++) {
     var q = i;
     playGame(q);
-    event.preventDefault()
+    event.preventDefault();
   }
 }
 
@@ -36,13 +38,13 @@ function startGame(event) {
 function setTime() {
 // Sets interval in variable
 
-  var timerInterval = setInterval(function() {
+  var clock = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = "Seconds left: " + secondsLeft;
-    
+
+// when countdown clock timer runs out remove game and show high score and save initials
     if(secondsLeft <= 0) {
-// Stops execution of action at set interval
-      clearInterval(timerInterval);
+      clearInterval(clock);
 
       timeEl.children.visibility = "none";
       timeEl.textContent = "Game Over";
@@ -57,13 +59,12 @@ function setTime() {
 
 function playGame(q) {
   var q;
-  var qhTag = document.createElement("p");
   questionEl.textContent = "Question: " + questions[q];
 
   var choices = initchoices[q].split(";");
   var answers = initanswers[q].split(';');
   
-  for (i = 0; i < choices.length; i++) {
+  for (var i = 0; i < choices.length; i++) {
     var value = i + 1;
     var guessbtnEl = document.createElement("button");
     guessbtnEl.textContent = choices[i];
@@ -74,19 +75,22 @@ function playGame(q) {
   }
   var btnElT = document.querySelector("#t");
   var btnElF = document.querySelectorAll("#f");
-  btnElT.addEventListener("click", getAnswer);
+  btnElT.addEventListener("click", function () {
+    console.log("you selected the answer!");
+    score++;
+    q++;
+  });
 
   btnElF.forEach(function(btnElF) {
     btnElF.addEventListener("click", function() {
       secondsLeft = secondsLeft - 10;
+      q++;
     })
   });
+  return;
 }
 
-function getAnswer() {
-  console.log("you selected the answer!");
-  score++;
-}
+
 
 function endGame(event) {
   event.preventDefault();
