@@ -8,22 +8,31 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
-        <div id="gamearea" class="container">
-            <button id="startgame" class="startgame">Start Game</button>
-            <div>
-                <p><span id="timerleft"></span></p>
+        <header>
+            <h1>Quiz about Javascript</h1>
+            <p class="time"><span id="timerleft"></span></p>
+        </header>
+        <div id="board" class="box">
+            <div id="start">
+                <button id="startgame">Start Game</button>
             </div>
-            <div id="question">
+            <div id="question" style="display: none;">
+                <label id="q"></label>
             </div>
-        </div>
-        <form id="form" class="box" method="POST" >
-            <div class="box">
+            <div id="answers" style="display: none;">
+                <p><label id="a1"></label></p>
+                <p><label id="a2"></label></p>
+                <p><label id="a3"></label></p>
+            </div>
+            <div id="results" style="display: none;">
                 <label>Enter Initials to save your score</label>
                 <input id="nameIN" type="text" placeholder="Enter your initials" />
-                <button id="save">SAVE</button>
+                <button id="save">Save Score</button>
             </div>
-        </form>
-
+            <div id="clear" style="display: none;">
+                <p>Game Over. Thanks for Playing.</p>
+            </div>
+        </div>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>

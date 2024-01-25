@@ -2,7 +2,7 @@
 
 ## Description
 
-game quiz that is timed and records high score at the end before quitting or restarting
+game quiz on JavaScript that is timed and records high score at the end before quitting or restarting
 
 
 ## Installation
@@ -17,6 +17,7 @@ refer to LICENSE in repo.
 
 ## Credits
 
+questions/answers from https://www.interviewbit.com/javascript-interview-questions
     
 
 ## Screenshots
