@@ -33,8 +33,5 @@ End Game and Save
 
 ## To-Do's
 
-
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
+move questions from individual functions to single function that is iterative.
 
