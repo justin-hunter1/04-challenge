@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Play Game</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div id="gamearea" class="container">
+            <button id="startgame" class="startgame">Start Game</button>
+            <div>
+                <p><span id="timerleft"></span></p>
+            </div>
+            <div id="question">
+            </div>
+        </div>
+        <form id="form" class="box" method="POST" >
+            <div class="box">
+                <label>Enter Initials to save your score</label>
+                <input id="nameIN" type="text" placeholder="Enter your initials" />
+                <button id="save">SAVE</button>
+            </div>
+        </form>
+
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
